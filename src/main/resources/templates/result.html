@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CREATION CONFIRMATION</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>User created successfully</h1>
+<p th:text="'username: ' + ${infouser.username}" />
+<a th:href="@{infouser}">Create another user</a><br>
+<a th:href="@{login}">Login</a>
+</body>
+</html>
