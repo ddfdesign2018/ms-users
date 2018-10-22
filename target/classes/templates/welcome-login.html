@@ -14,16 +14,18 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.1/examples/sign-in/signin.css" rel="stylesheet">
 </head>
-<body class="text-center" text="center">
+<body>
 
+<div class="text-center">
+<h1>Please sign in</h1><br/><br/><br>
 <p th:if="${param.error}" class="error">
     Bad Credentials
 </p>
-<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1><BR>
 <form th:action="@{/app-login}" method="POST">
     <label>Username: </label> <input type="text" name="app_username" placeholder="Username"/> <br/><br/>
     <label>Password:</label> <input type="password" name="app_password" placeholder="Password"/> <br/><br/>
     <input type="submit" value="Login"/>
 </form><BR>
 <a th:href="@{infouser}">Create new User</a><BR>
+</div>
 </body>

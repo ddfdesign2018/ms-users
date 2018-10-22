@@ -31,7 +31,6 @@ public class UserInfoController {
     public ModelAndView getInitialpage() {
         System.out.println("GetMapping /secure/logged");
         ModelAndView mav = new ModelAndView();
-        //mav.addObject("userArticles", userInfoService.getAllUserArticles());
         mav.setViewName("logged");
         return mav;
     }
@@ -72,7 +71,6 @@ public class UserInfoController {
         userInfo.setName(infouser.getName());
         userInfo.setSurnames(infouser.getSurnames());
         check = userInfoService.createUser(userInfo);
-        System.out.println("final infoUserSubmi");
         if (check) {
             return "result";
         }
@@ -89,5 +87,15 @@ public class UserInfoController {
         mav.setViewName("result");
         return mav;
     }
+
+    @GetMapping("/createAnimal")
+    public ModelAndView createAnimal(){
+        System.out.println("/Result get create Animal");
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("createAnimal");
+        return mav;
+    }
+
+
 }
 

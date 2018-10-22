@@ -5,12 +5,25 @@
     <link rel="stylesheet" href="/css/styles.css"/>
 </head>
 <body>
-<h3>Logged details OK OK OK</h3>
+<h3>LOGGED SUCCESSFULLY</h3>
 <div>
     Logged in user: <b th:inline="text"  class="user"> [[${#httpServletRequest.remoteUser}]] </b>
     <form th:action="@{/logout}" method="POST">
         <input type="submit" value="Logout"/>
     </form>
+    <form action="http://localhost:8762/api/app/animal" method="GET">
+        <input type="submit" value="Animals con Zuul"/>
+    </form>
+    <form action="http://localhost:8763/app/animal" method="GET">
+        <input type="submit" value="Animals sin Zuul"/>
+    </form>
+    <form action="http://localhost:8763/app/animalId" method="GET">
+        <p>Id: <input type="text" name="idAnimal" /></p>
+        <input type="submit" value="Animal by ID sin Zuul"/>
+    </form>
+    <a href="http://localhost:8760/app/createAnimal">Create animal</a>
+
+
 </div> <br/>
 
 </body>
