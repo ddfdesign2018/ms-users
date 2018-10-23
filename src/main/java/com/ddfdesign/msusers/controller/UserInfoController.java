@@ -21,7 +21,7 @@ public class UserInfoController {
 
     @GetMapping("login")
     public ModelAndView login() {
-        System.out.println("Getm Mapping /login");
+        System.out.println("Get Mapping /login");
         ModelAndView mav = new ModelAndView();
         mav.setViewName("welcome-login");
         return mav;
@@ -88,7 +88,7 @@ public class UserInfoController {
         return mav;
     }
 
-    @GetMapping("/createAnimal")
+    @GetMapping("/secure/createAnimal")
     public ModelAndView createAnimal(){
         System.out.println("/Result get create Animal");
         ModelAndView mav = new ModelAndView();

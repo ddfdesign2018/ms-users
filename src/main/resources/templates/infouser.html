@@ -3,17 +3,59 @@
 <head>
     <title>USER CREATION</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/checkout/form-validation.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
+<div class="container">
 <h1>User Creation Form</h1>
 <form action="#" th:action="@{infouser}" th:object="${infouser}" method="post">
-    <p>Username: <input type="text" th:field="*{username}" /></p>
-    <p>Password: <input type="text" th:field="*{password}" /></p>
-    <p>eMail: <input type="email" th:field="*{email}" /></p>
-    <p>Name: <input type="text" th:field="*{name}" /></p>
-    <p>Surnames: <input type="text" th:field="*{surnames}" /></p>
+    <!--<p>Username: <input type="text" th:field="*{username}" /></p>-->
+    <!--<p>Password: <input type="text" th:field="*{password}" /></p>-->
+    <!--<p>eMail: <input type="email" th:field="*{email}" /></p>-->
+    <!--<p>Name: <input type="text" th:field="*{name}" /></p>-->
+    <!--<p>Surnames: <input type="text" th:field="*{surnames}" /></p>-->
+    <div class="mb-3">
+        <label for="username">Username <span class="text-muted"></span></label>
+        <input type="text" th:field="*{username}" class="form-control" id="username" placeholder="user0">
+        <div class="invalid-feedback">
+            Please enter a valid username.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="password">Password <span class="text-muted"></span></label>
+        <input type="text" th:field="*{password}" class="form-control" id="password" placeholder="password0">
+        <div class="invalid-feedback">
+            Please enter a valid password.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="email">Email <span class="text-muted"></span></label>
+        <input type="email" th:field="*{email}" class="form-control" id="email" placeholder="you@example.com">
+        <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="name">Name <span class="text-muted"></span></label>
+        <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name0">
+        <div class="invalid-feedback">
+            Please enter a valid Name.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="surnames">Surnames <span class="text-muted"></span></label>
+        <input type="text" th:field="*{surnames}" class="form-control" id="surnames" placeholder="Surname0">
+        <div class="invalid-feedback">
+            Please enter a valid Surname.
+        </div>
+    </div>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 <a th:href="@{login}">Welcome page</a><BR>
+</div>
 </body>
 </html>

@@ -11,18 +11,26 @@
     <form th:action="@{/logout}" method="POST">
         <input type="submit" value="Logout"/>
     </form>
+    <br>
     <form action="http://localhost:8762/api/app/animal" method="GET">
         <input type="submit" value="Animals con Zuul"/>
     </form>
+    <br>
     <form action="http://localhost:8763/app/animal" method="GET">
         <input type="submit" value="Animals sin Zuul"/>
     </form>
+    <br>
     <form action="http://localhost:8763/app/animalId" method="GET">
         <p>Id: <input type="text" name="idAnimal" /></p>
         <input type="submit" value="Animal by ID sin Zuul"/>
     </form>
-    <a href="http://localhost:8760/app/createAnimal">Create animal</a>
-
+    <br>
+    <a href="http://localhost:8760/app/secure/createAnimal">Create animal</a>
+    <br>
+    <form action="http://localhost:8763/app/breed" method="GET">
+        <p>Id: <input type="text" name="breed" /></p>
+        <input type="submit" value="Animal by Breed sin Zuul"/>
+    </form>
 
 </div> <br/>
 

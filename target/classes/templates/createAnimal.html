@@ -1,17 +1,22 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>ANIMALES</title>
+    <title>ANIMALS</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/checkout/form-validation.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 <h1>Create Animal</h1>
-
-<h1>Animal Creation Form</h1>
+<div class="container">
 <form action="http://localhost:8763/app/animalId" method="POST">
 
+    <div class="mb-3">
     <p>Name: <input type="text" name="name" /></p>
+    </div>
     <p>Sex: <input type="text" name="sex" /></p>
     <p>Color: <input type="text" name="color" /></p>
     <p>Mother: <input type="text" name="mother" /></p>
@@ -22,6 +27,6 @@
     <p>Weight: <input type="text" name="weight" /></p>
     <input type="submit" value="Animal Creation by ID sin Zuul"/>
 </form>
-
+</div>
 </body>
 </html>
