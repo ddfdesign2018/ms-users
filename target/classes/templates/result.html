@@ -3,11 +3,18 @@
 <head>
     <title>CREATION CONFIRMATION</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/checkout/form-validation.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
+<div class="container">
 <h1>User created successfully</h1>
 <p th:text="'username: ' + ${infouser.username}" />
 <a th:href="@{infouser}">Create another user</a><br>
 <a th:href="@{login}">Login</a>
+</div>
 </body>
 </html>

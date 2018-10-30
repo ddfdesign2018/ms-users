@@ -21,7 +21,7 @@ public class UserInfoController {
 
     @GetMapping("login")
     public ModelAndView login() {
-        System.out.println("Get Mapping /login");
+
         ModelAndView mav = new ModelAndView();
         mav.setViewName("welcome-login");
         return mav;
@@ -29,7 +29,7 @@ public class UserInfoController {
 
     @GetMapping("secure/logged")
     public ModelAndView getInitialpage() {
-        System.out.println("GetMapping /secure/logged");
+
         ModelAndView mav = new ModelAndView();
         mav.setViewName("logged");
         return mav;
@@ -46,7 +46,7 @@ public class UserInfoController {
 
     @GetMapping("/infouser")
     public String infoUserForm(Model model) {
-        System.out.println("/Infouser get");
+
         model.addAttribute("infouser", new Infouser());
         return "infouser";
     }
@@ -61,8 +61,8 @@ public class UserInfoController {
     @PostMapping("/infouser")
     public String infoUserSubmit(@ModelAttribute Infouser infouser) {
         boolean check = false;
-        System.out.println(infouser.getPassword());
-        System.out.println(infouser.getUsername());
+        //System.out.println(infouser.getPassword());
+        //System.out.println(infouser.getUsername());
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         UserInfo userInfo = new UserInfo();
         userInfo.setUsername(infouser.getUsername());
@@ -82,7 +82,7 @@ public class UserInfoController {
     //Get method que devuelve un eco del usuario que se quiere crear
     @GetMapping("/result")
     public ModelAndView newresult(){
-        System.out.println("/Result get");
+
         ModelAndView mav = new ModelAndView();
         mav.setViewName("result");
         return mav;
@@ -90,7 +90,7 @@ public class UserInfoController {
 
     @GetMapping("/secure/createAnimal")
     public ModelAndView createAnimal(){
-        System.out.println("/Result get create Animal");
+
         ModelAndView mav = new ModelAndView();
         mav.setViewName("createAnimal");
         return mav;

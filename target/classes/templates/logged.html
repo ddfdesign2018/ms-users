@@ -2,40 +2,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>LOGGED</title>
-    <link rel="stylesheet" href="/css/styles.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/checkout/form-validation.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
+<div class="container">
 <h3>LOGGED SUCCESSFULLY</h3>
 <div>
     Logged in user: <b th:inline="text"  class="user"> [[${#httpServletRequest.remoteUser}]] </b>
+    <br>
     <form th:action="@{/logout}" method="POST">
         <input type="submit" value="Logout"/>
     </form>
     <br>
-    <form action="http://localhost:8762/api/app/animal" method="GET">
+    <br>
+    <form action="http://localhost:8762/api/animals-ms/app/animal" method="GET">
         <input type="submit" value="Animals con Zuul"/>
     </form>
+    <br>
     <br>
     <form action="http://localhost:8763/app/animal" method="GET">
         <input type="submit" value="Animals sin Zuul"/>
     </form>
+    <br>
     <br>
     <form action="http://localhost:8763/app/animalId" method="GET">
         <p>Id: <input type="text" name="idAnimal" /></p>
         <input type="submit" value="Animal by ID sin Zuul"/>
     </form>
     <br>
+    <br>
     <a href="http://localhost:8760/app/secure/createAnimal">Create animal</a>
+    <br>
     <br>
     <form action="http://localhost:8763/app/breed" method="GET">
         <p>Id: <input type="text" name="breed" /></p>
         <input type="submit" value="Animal by Breed sin Zuul"/>
     </form>
+    <br>
+    <br>
     <form action="http://localhost:8763/app/all" method="GET">
         <input type="submit" value="All desde animals sin Zuul"/>
     </form>
 
 </div> <br/>
-
+</div>
 </body>
 </html>

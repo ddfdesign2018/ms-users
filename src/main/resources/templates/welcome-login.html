@@ -13,7 +13,7 @@
 <div class="container">
 
 <h1>Please sign in</h1><br/><br/><br>
-<p th:if="${param.error}" class="error">
+<p th:if="${param.error}" class="access-denied">
     Bad Credentials
 </p>
 <form th:action="@{/app-login}" method="POST">
